@@ -1,0 +1,19 @@
+
+
+
+Usando el archivo de word genera los código HTML y CSS para todos una rutina de gimnasio de 7 días con la información que tiene el Word. Aunque aún faltan datos en la columna 3, esta deberá contener dos espacios para integrar un video y una imagen de referencia para cada ejercicio.
+
+Si es necesario incluye botones para avanzar, regresar, ir al home o genera un menú de navegación, se trata de visualizar la información día a día, de los (de lunes a domingo, como se organizó en el archivo Word)  
+
+Deberá estar optimizada para ser responsiva y adaptarse a cualquier tipo de pantalla: PC, móvil, TV, laptop y funcionar como si se tratara de una aplicación para Android.
+
+En la parte alta tendrá un banner rectangular con esquinas redondeadas donde aparezca la imagen "mi foto" que te adjunto, acompañada de la leyenda "Gym routine by @rasek5 a manera de header y en la parte baja un footer iconos de las siguientes redes sociales: Character AI, X, HugguingChat,  linktr.ee y LinkedIn, incluido el logo de derechos reservados México2025
+prioriza una paleta de colores azul y verde para darle un tono fresco y relacionado con temas de vida sana y salud, que luzca elegante y profesional.
+
+Considera que no soy programador y ejecutaré todo desde mi unidad c, para que agregues los enlaces respectivos a cada archivo html generado. también genera código del archivo css para guardarlo en la misma carpeta y que se aplique a todos los html
+
+incluye un sistema de progreso visual para cada día que se actualice de manera automática, para mostrar el avance a lo largo de la rutina semanal.
+
+Guarda cada día en un archivo HTML separado ejemplo: lunes.html, martes.html, etc.
+
+Si es posible genera el front end visual, para el sitio web con imágenes que aporten a su usabilidad y experiencia dela navegación. 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutina de Gimnasio | Domingo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="mi_foto.jpg" alt="Perfil" class="profile-pic">
+      <div class="header-title">Gym routine by @rasek5</div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Mi Rutina Gym</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="lunes.html">Lunes</a></li>
+        <li><a href="martes.html">Martes</a></li>
+        <li><a href="miercoles.html">Miércoles</a></li>
+        <li><a href="jueves.html">Jueves</a></li>
+        <li><a href="viernes.html">Viernes</a></li>
+        <li><a href="sabado.html">Sábado</a></li>
+        <li><a href="domingo.html" class="active">Domingo</a></li>
+      </ul>
+      <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="progress-container">
+      <h2 class="progress-title">Progreso semanal</h2>
+      <div class="progress-bar">
+        <div class="progress-day" id="day1">Lun</div>
+        <div class="progress-day" id="day2">Mar</div>
+        <div class="progress-day" id="day3">Mié</div>
+        <div class="progress-day" id="day4">Jue</div>
+        <div class="progress-day" id="day5">Vie</div>
+        <div class="progress-day" id="day6">Sáb</div>
+        <div class="progress-day" id="day7">Dom</div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h1 class="day-title">Domingo - Descanso Activo o Completo</h1>
+      
+      <div class="rest-options">
+        <h2>Opciones:</h2>
+        <ul>
+          <li>
+            <h3>Caminata ligera, yoga o estiramientos</h3>
+            <p>Una sesión de 20-30 minutos de caminata a ritmo suave, o una práctica de yoga restaurativo o una rutina de estiramientos para mejorar la flexibilidad y recuperación muscular.</p>
+          </li>
+          <li>
+            <h3>Uso de foam roller para liberación miofascial</h3>
+            <p>Dedica 15-20 minutos a trabajar con el foam roller en los principales grupos musculares para ayudar a la recuperación y prevenir la tensión muscular.</p>
+          </li>
+          <li>
+            <h3>Descanso completo</h3>
+            <p>Permitir que el cuerpo se recupere por completo, priorizando la calidad del sueño y una buena hidratación y nutrición.</p>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="notes-section">
+        <h2 class="notes-title">Beneficios del descanso activo</h2>
+        <ul class="notes-list">
+          <li>Promueve la recuperación muscular</li>
+          <li>Mejora la circulación sanguínea</li>
+          <li>Reduce la rigidez y el dolor muscular</li>
+          <li>Prepara el cuerpo para la siguiente semana de entrenamiento</li>
+          <li>Permite la regeneración del sistema nervioso central</li>
+        </ul>
+      </div>
+      
+      <div class="navigation-buttons">
+        <a href="sabado.html" class="nav-button prev">
+          <i class="fas fa-arrow-left"></i> Anterior
+        </a>
+        <a href="index.html" class="nav-button home">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="lunes.html" class="nav-button next">
+          Comenzar nueva semana <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fas fa-robot"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-hubspot"></i></a>
+        <a href="#" class="social-icon"><i class="fas fa-link"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        © Derechos Reservados México 2025
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    
+    // Progress indicator
+    function updateProgress() {
+      const today = new Date().getDay(); // 0-6 (Sunday-Saturday)
+      const dayMapping = [7, 1, 2, 3, 4, 5, 6]; // Convert JS day to our day numbering
+      const currentDay = dayMapping[today];
+      
+      for (let i = 1; i <= 7; i++) {
+        const dayElement = document.getElementById(`day${i}`);
+        if (i < currentDay) {
+          dayElement.classList.add('completed');
+        } else if (i === currentDay) {
+          dayElement.classList.add('current');
+        } else {
+          dayElement.classList.add('upcoming');
+        }
+      }
+    }
+    
+    updateProgress();
+  </script>
+</body>
+</html>
